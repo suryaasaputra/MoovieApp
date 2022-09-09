@@ -53,13 +53,39 @@ const main = () => {
 		$.ajax({
 			url: `https://api.themoviedb.org/3/search/movie?api_key=a3d88eeb5f330c5238138a8a41be581e&language=en-US&query=${keyword.val()}&page=1&include_adult=false`,
 			success: (result) => {
-				console.log(result.results);
-				if (!result.results === []) {
-					console.log("search succes");
+				if ($.isEmptyObject(result.results)) {
+					mainPage.html("");
+					console.log("Not Found");
 					hero.remove();
-					caption.html(
-						`Search result for:<span class="keyword"> ${keyword.val()}</span>`
-					);
+					// caption.html(
+					// 	`Empty result for :<span class="keyword"> ${keyword.val()}</span>`
+					// );
+					$("#movieList").html("");
+					mainPage.append(`
+					<section>
+						<div class="text-center p-3 d-flex">
+							<h3 class="section-title">Empty result for :<span class="keyword"> ${keyword.val()}</span></h3>
+						</div>
+					<div class="row py-5">
+						<div class="col-12 d-flex">
+							<img src=${image} class="img-fluid mx-auto"/>
+						</div>
+					</div>
+					</section>
+					`);
+				} else {
+					console.log("search succes");
+					mainPage.html(`
+					<section>	
+						<div class="text-center p-3 d-flex">
+						<h3 class="section-title">Search result for:<span class="keyword"> ${keyword.val()}</span></h3>
+						</div>						
+						<div class="row px-4 justify-content-center movie-list"
+							id="movieList"
+						></div>
+					</section>
+					`);
+
 					$("#movieList").html("");
 					const searchResult = result.results;
 					$.each(searchResult, (num, movie) => {
@@ -83,25 +109,10 @@ const main = () => {
 									</p>
 									<span class="movie_info">Release Date :<b> ${dateConverted}</b></span>
 									<span class="movie_info float-end" >Rate: <b>${movie.vote_average}/10</b></span>
-
 							</div>
 							</div>
 						</div>`);
 					});
-				} else {
-					console.log("Not Found");
-					hero.remove();
-					caption.html(
-						`Empty result for :<span class="keyword"> ${keyword.val()}</span>`
-					);
-					$("#movieList").html("");
-					mainPage.append(`
-					<div class="row py-5">
-						<div class="col-12 d-flex">
-							<img src=${image} class="img-fluid mx-auto"/>
-						</div>
-					</div>
-					`);
 				}
 			},
 		});
