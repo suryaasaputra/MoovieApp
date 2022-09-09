@@ -11,7 +11,7 @@ class AppHero extends HTMLElement {
 					<div class="row">
 						<div class="col-lg-5 align-self-center text-center">
 							<h2 class="hero-title">Find Best Movie Recomendation</h2>
-							<p>Watch Movie to refresh your mind</p>
+							<p>Did you know watching movie could boost your mental health, relieve stress, and foster relationships? </p>
 							<!-- <button type="button" class="buton-primary p-2">
 								Find Movies
 							</button> -->
