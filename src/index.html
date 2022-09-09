@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Moovie App</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-bg py-2 shadow-sm">
+				<div class="container">
+					<a class="title fw-bold" href="/"
+						><span class="web-title"> <i class="fa-solid fa-film"> </i></span
+						>Moovie
+					</a>
+					<form class="d-flex" id="searchForm" role="search">
+						<input
+							class="form-control me-2"
+							type="search"
+							placeholder="Search movie"
+							aria-label="Search"
+							id="keyword"
+						/>
+						<button class="buton-primary px-3" type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					</form>
+				</div>
+			</nav>
+		</header>
+		<div class="dflex mx-auto dot-elastic" id="loadingDiv"></div>
+		<main id="main">
+			<app-hero></app-hero>
+			<section>
+				<div class="text-center p-3 d-flex">
+					<h3 class="section-title">Movie Recomendation This Week</h3>
+				</div>
+				<div class="row px-3 justify-content-center" id="movieList"></div>
+			</section>
+		</main>
+	</body>
+</html>

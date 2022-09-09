@@ -1,0 +1,107 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~three-dots/sass/three-dots";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+.navbar-bg {
+	background-color: #ffffff;
+}
+
+.title {
+	font-size: 34px;
+	text-decoration: none;
+	color: #2f2e41;
+	letter-spacing: -1px;
+	word-spacing: -2px;
+}
+.title:hover {
+	text-decoration: none;
+	color: #2f2e41;
+}
+
+.buton-primary {
+	border-radius: 4px;
+	border: none;
+	background-color: #284b63;
+	color: #ffffff;
+}
+
+.web-title {
+	color: #284b63;
+	text-shadow: 0px 0px 1px rgba(24, 83, 99, 0.85);
+	letter-spacing: 1px;
+}
+.hero {
+	background: rgb(245, 245, 245);
+	background: linear-gradient(
+		180deg,
+		rgba(245, 245, 245, 1) 0%,
+		rgba(255, 255, 255, 1) 80%
+	);
+}
+
+.hide {
+	display: none;
+}
+
+.hero-title {
+	font-weight: 700;
+	color: #284b63;
+}
+.hero p {
+	color: #323145;
+}
+
+.section-title {
+	margin: auto;
+	color: #323145;
+	font-size: 30px;
+	font-weight: 600;
+	border-bottom: 2px solid #353535;
+}
+
+.image-banner img {
+	max-height: 500px;
+}
+/* card movie */
+
+.movie_card {
+	padding: 0 !important;
+	border-radius: 10px;
+	box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+	min-height: 435px;
+}
+.movie-item {
+	padding: 10px;
+}
+.card-title {
+	color: #2f2e41;
+	font-weight: 600;
+}
+.card-text {
+	text-align: justify;
+	font-size: 12px;
+}
+.movie_card img {
+	object-fit: cover;
+	max-height: 250px;
+}
+
+.movie_info {
+	color: #5e5c5c;
+}
+
+
+
+.movie_info .rate{
+	font-size: 16px;
+	justify-self: end;
+}
+
+#loadingDiv{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
