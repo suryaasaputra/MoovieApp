@@ -1,6 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~three-dots/sass/three-dots";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+$dot-width: 15px !default;
+$dot-height: 15px !default;
+$dot-radius: $dot-width * .5 !default;
+
+$dot-color: #284b63 !default;
+$dot-bg-color: $dot-color !default;
+$dot-before-color: $dot-color !default;
+$dot-after-color: $dot-color !default;
+
+$dot-spacing: $dot-width + $dot-width * .5 !default;
+
 * {
 	font-family: "Poppins", sans-serif;
 }
@@ -54,6 +65,10 @@
 	color: #323145;
 }
 
+.keyword {
+	color:#284b63,
+}
+
 .section-title {
 	margin: auto;
 	color: #323145;
@@ -65,11 +80,6 @@
 .image-banner img {
 	max-height: 500px;
 }
-// .movie-list{
-// 	min-height: auto;
-// }
-
-/* card movie */
 
 
 .movie_card {
@@ -91,7 +101,7 @@
 }
 .movie_card img {
 	object-fit: cover;
-	max-height: 250px;
+	height: 250px;
 }
 
 .movie_info {
