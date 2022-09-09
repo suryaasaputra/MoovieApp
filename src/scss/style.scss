@@ -65,7 +65,12 @@
 .image-banner img {
 	max-height: 500px;
 }
+// .movie-list{
+// 	min-height: auto;
+// }
+
 /* card movie */
+
 
 .movie_card {
 	padding: 0 !important;
@@ -104,4 +109,14 @@
 	position: absolute;
 	left: 50%;
 	top: 50%;
+}
+
+footer {
+	color: #2f2e41;
+	background: rgb(245, 245, 245);
+	background: linear-gradient(
+		0deg,
+		rgb(224, 223, 223) 0%,
+		rgba(255, 255, 255, 1) 80%
+	);
 }
