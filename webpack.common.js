@@ -8,7 +8,7 @@ module.exports = {
 	entry: "./src/app.js",
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "hasil.js",
+		filename: "bundle.js",
 	},
 	optimization: {
 		minimize: true,
@@ -16,10 +16,6 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
-				test: /\.(png|svg|jpg|jpeg|gif)$/i,
-				type: "asset/resource",
-			},
 			{
 				test: /\.(scss)$/,
 				use: [
